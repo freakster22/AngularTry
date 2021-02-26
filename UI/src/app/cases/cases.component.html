@@ -1,0 +1,48 @@
+<body>
+    <h1 text-align="centre">Welcome to UI Automation</h1>
+    <h4>Please Select the Test Scenarios</h4>
+    <br>
+    <div class="form-check">
+    <table class ="table table-bordered table-hover">
+        <tr class="thead-dark">
+            <th>Selection</th>
+            <th>Test Case</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td><input class="form-check-input customRd" type="radio" name="rdbtn" value="createProfile" checked
+                (change)="onItemChange($event.target.value)">
+                <span class="design"></span>
+            </td>
+            <td>CreateProfile</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td><input class="form-check-input customRd" type="radio" name="rdbtn" value="TestLogin"
+                (change)="onItemChange($event.target.value)">
+                <span class="design"></span>
+            </td>
+            <td>TestLogin</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td><input class="form-check-input customRd" type="radio" name="rdbtn" value="TestSubmit"
+                (change)="onItemChange($event.target.value)">
+            <span class="design"></span>
+            </td>
+            <td >TestSubmit</td>
+            <td>Pass</td>
+        </tr>
+    </table>
+    </div>
+    <span></span>
+    &nbsp; &nbsp;
+    <span></span>
+   <button class= "btn success" (click)="onSubmit($event)" style='margin-right:16px'>Submit</button>
+    <button class = "btn reset" (click)="onClear($event)" type = "reset " style='margin-right:16px' >Clear</button>
+    <br><br>
+    <div *ngIf = "isShown">
+    <h3>{{btnStatus}} , The selected one is: {{selected}}</h3>
+
+</div>
+</body>
